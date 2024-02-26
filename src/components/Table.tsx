@@ -101,13 +101,11 @@ const Table: React.FC = () => {
             <button onClick={() => handleRowClick(4)}>Select Row 4</button>
             <button onClick={() => handleColumnClick('A')}>Select Column A</button>
             <button onClick={() => handleColumnClick('B')}>Select Column B</button>
-            {/* Добавляем кнопки для остальных столбцов */}
             {Array.from({ length: 14 }, (_, i) => (
                 <button key={i + 3} onClick={() => handleColumnClick(String.fromCharCode(67 + i))}>
                     Select Column {String.fromCharCode(67 + i)}
                 </button>
             ))}
-            {/* Добавляем кнопку для выбора всех элементов */}
             <button onClick={handleAllCellsClick}>Select All Cells</button>
         </div>
     );
